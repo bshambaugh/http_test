@@ -71,13 +71,16 @@ $sparql = new EasyRdf_Sparql_Client('http://localhost:8080/marmotta/sparql/');
 ');
 */
 
+$string = '<div>'.'?subject = http://localhost:8080/marmotta/ldp/NASA#137'.'</div><br/><table><tr><th>'.'?property'.'</th><th>'.'?object'.'</th></tr>';
+
  foreach ($result as $key => $value) {
-    echo "$value->property"."\n";
+    $string = $string.'<tr><td>'."$value->property".'</td><td>'." "."$value->object".'</td></tr>';
  }
 
+$string = $string.'</table>';
 // return $result_taxpred;
-
-   return "hello";
+   return $string;
+//   return "hello";
 } else {
 
   return "jello";

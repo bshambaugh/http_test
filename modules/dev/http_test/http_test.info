@@ -1,0 +1,5 @@
+name = "http_test"
+description = "This is an example of using an HTTP Request"
+core= "7.x"
+package = "HTTP"
+version = "7.x-1.x"

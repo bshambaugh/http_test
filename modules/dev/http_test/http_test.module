@@ -1,0 +1,19 @@
+<?php
+function http_test_menu() {
+  $items['test_http'] = array(
+   "title" => "HTTP-Testing",
+   "page callback" => "http_test_get_page",
+   'file' => "http_test.page.inc",
+   'access arguments' => array('access content')
+);
+
+
+  $items['test_sparql'] = array(
+    "title" => "SPARQL-Testing",
+    "page callback" => "test_sparql_get_page",
+    "file" => "test_sparql.page.inc",
+    "access arguments" => array('access content')
+);
+
+  return $items;
+}
